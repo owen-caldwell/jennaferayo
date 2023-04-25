@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Set the width of the page to follow the screen width of the device and prevent mobile devices from scaling
+        pages down. \/ \/ -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- BACKGROUND -->
+    <div id="bg" style="display:block;">
+        <img id="bgimg" src="background/03.gif">
+    </div>
+    <!--PHOTO BACKGROUND-->
+    <div id="jenna-container">
+    <nav>
+        <img id="jenna" src="jenna.png">
+        <a href="video.html">
+            <img src="disc.png">
+            <span>VIDEO</span>
+        </a>
+        <a onclick="photoPop()">
+            <img src="camcorder.png">
+            <span>PHOTO</span>
+        </a>
+    </nav>
+    </div>
+    <!-- NAV
+    <nav>
+        <a href="home">HOME</a>
+        <a href="video">VIDEO</a>
+        <a onclick="photoPop()">PHOTO</a>
+    </nav> -->
+    <!-- PHOTO MENU: thumbnail container-->
+    <div style="display: flex;" id="pthumbnail-container">
+        <img id="photoA" src="photo/alex/alex_cover.webp" style="display: none;">
+        <img id="photoB" src="photo/azalea/azalea_cover.webp" style="display: none;">
+        <img id="photoC" src="" style="display: none;">
+        <img id="photoD" src="photo/lks_room/lksroom_cover.webp" style="display: none;">
+        <img id="photoE" src="photo/mia/mia_cover.webp" style="display: none;">
+        <img id="photoF" src="photo/tori/tori_cover.webp" style="display: none;">
+    </div>
+    <body>
+        <!-- PHOTO MENU: linked slideshow buttons -->
+        <div style="display: none;" id="photo-menu">
+            <a target="_blank" href="alex.html" onmouseover="pHover('photoA')" onmouseleave="pHover('photoA')" style="top: 490px; right: 20%;">ALEX</a>
+            <a target="_blank" href="azalea.html" onmouseover="pHover('photoB')" onmouseleave="pHover('photoB')" style="top: 300px; right: 10%;">AZALEA</a>
+            <a target="_blank" href="" onmouseover="pHover('photoC')" onmouseleave="pHover('photoC')" style="top: 275px; left: 15%;">N/A</a>
+            <a target="_blank" href="lk.html" onmouseover="pHover('photoD')" onmouseleave="pHover('photoD')" style="top: 150px;; right: 25%;">LK's ROOM</a>
+            <a target="_blank" href="mia.html" onmouseover="pHover('photoE')" onmouseleave="pHover('photoE')" style="top: 400px; left: 10%;">MIA</a>
+            <a target="_blank" href="tori.html" onmouseover="pHover('photoF')" onmouseleave="pHover('photoF')" style="top: 500px; left: 15%;">TORI</a>
+        </div>
+        <div id="content-wrapper">
+            <article>
+                <p>
+                @JENNA.FERAYO <br>
+                +1 302 650 4355 <br>
+                JENNAFERAYO@GMAIL.COM
+                </p>
+            </article>
+            <article>
+            </article>
+            <article>
+                <img id="globe" src="transpolar.gif">
+            </article>
+        </div>
+    </body>
+    <script>
+        // -- PHOTO RELATED SCRIPTS --
+        // show photo page
+        function photoPop() {
+            var x = document.getElementById("photo-menu");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        // hover
+        function pHover(photo) {
+            var x = document.getElementById(photo);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <script src="randombackground.js"></script>
+</html>
