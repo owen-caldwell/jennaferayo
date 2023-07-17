@@ -18,6 +18,10 @@
             <img src="disc.png">
             <span>VIDEO</span>
         </a>
+        <a onclick="printPop()">
+            <img src="camcorder.png">
+            <span>PRINT</span>
+        </a>
         <a onclick="photoPop()">
             <img src="camcorder.png">
             <span>PHOTO</span>
@@ -41,13 +45,22 @@
     </div>
     <body>
         <!-- PHOTO MENU: linked slideshow buttons -->
-        <div style="display: none;" id="photo-menu">
-            <a target="_blank" href="alex.html" onmouseover="pHover('photoA')" onmouseleave="pHover('photoA')" style="top: 490px; right: 20%;">ALEX</a>
-            <a target="_blank" href="azalea.html" onmouseover="pHover('photoB')" onmouseleave="pHover('photoB')" style="top: 300px; right: 10%;">AZALEA</a>
-            <a target="_blank" href="" onmouseover="pHover('photoC')" onmouseleave="pHover('photoC')" style="top: 275px; left: 15%;">N/A</a>
-            <a target="_blank" href="lk.html" onmouseover="pHover('photoD')" onmouseleave="pHover('photoD')" style="top: 150px;; right: 25%;">LK's ROOM</a>
-            <a target="_blank" href="mia.html" onmouseover="pHover('photoE')" onmouseleave="pHover('photoE')" style="top: 400px; left: 10%;">MIA</a>
-            <a target="_blank" href="tori.html" onmouseover="pHover('photoF')" onmouseleave="pHover('photoF')" style="top: 500px; left: 15%;">TORI</a>
+        <div style="display: none;" id="print-menu">
+            <a href="alex.html" onmouseover="pHover('photoA')" onmouseleave="pHover('photoA')" style="top: 490px; right: 20%;">ALEX</a>
+            <a href="azalea.html" onmouseover="pHover('photoB')" onmouseleave="pHover('photoB')" style="top: 300px; right: 10%;">AZALEA</a>
+            <a href="" onmouseover="pHover('photoC')" onmouseleave="pHover('photoC')" style="top: 275px; left: 15%;">N/A</a>
+            <a href="lk.html" onmouseover="pHover('photoD')" onmouseleave="pHover('photoD')" style="top: 150px;; right: 25%;">LK's ROOM</a>
+            <a href="mia.html" onmouseover="pHover('photoE')" onmouseleave="pHover('photoE')" style="top: 400px; left: 10%;">MIA</a>
+            <a href="tori.html" onmouseover="pHover('photoF')" onmouseleave="pHover('photoF')" style="top: 500px; left: 15%;">TORI</a>
+        </div>
+        <div style="display: none" id="photo-menu">
+            <button></button>
+            <div>
+                <span>~/PHOTOS</span>
+                <a>ALEX</a>
+                <a>AZALEA</a>
+            </div>
+            <button></button>
         </div>
         <div id="content-wrapper">
             <article>
