@@ -12,29 +12,23 @@
     </div>
     <!--PHOTO BACKGROUND-->
     <div id="jenna-container">
-    <nav>
-        <img id="jenna" src="jenna.png">
-        <a href="video.html">
-            <img src="disc.png">
-            <span>VIDEO</span>
-        </a>
-        <a onclick="printPop()">
-            <img src="camcorder.png">
-            <span>PRINT</span>
-        </a>
-        <a onclick="photoPop()">
-            <img src="camcorder.png">
-            <span>PHOTO</span>
-        </a>
-    </nav>
+        <nav>
+            <img id="jenna" src="jenna.png">
+            <a href="video.html">
+                <img src="disc.png">
+                <span>VIDEO</span>
+            </a>
+            <a onclick="printPop()">
+                <img src="camcorder.png">
+                <span>PRINT</span>
+            </a>
+            <a onclick="photoPop()">
+                <img src="camcorder.png">
+                <span>PHOTO</span>
+            </a>
+        </nav>
     </div>
-    <!-- NAV
-    <nav>
-        <a href="home">HOME</a>
-        <a href="video">VIDEO</a>
-        <a onclick="photoPop()">PHOTO</a>
-    </nav> -->
-    <!-- PHOTO MENU: thumbnail container-->
+    <!-- PHOTO MENU: thumbnail container (OLD)-->
     <div style="display: flex;" id="pthumbnail-container">
         <img id="photoA" src="photo/alex/alex_cover.webp" style="display: none;">
         <img id="photoB" src="photo/azalea/azalea_cover.webp" style="display: none;">
@@ -54,13 +48,21 @@
             <a href="tori.html" onmouseover="pHover('photoF')" onmouseleave="pHover('photoF')" style="top: 500px; left: 15%;">TORI</a>
         </div>
         <div style="display: none" id="photo-menu">
-            <button></button>
+            <button onclick="photoPop()"></button>
             <div>
-                <span>~/PHOTOS</span>
-                <a>ALEX</a>
-                <a>AZALEA</a>
+                <span>PHOTOS</span><br>
+                <a href="alex.html">alex 2022</a>
+                <a>alex 2023</a>
+                <a>azelea 2022</a>
+                <a>bridget 2023</a>
+                <a>lk's room 2022</a>
+                <a>mia 2020</a>
+                <a>rae 2023</a>
+                <a>tori 2020</a>
+                <a>we love fruits mag</a><br>
+                <span style="color: red;" onclick="photoPop()">[BACK]</span>
             </div>
-            <button></button>
+            <button onclick="photoPop()"></button>
         </div>
         <div id="content-wrapper">
             <article>
@@ -82,10 +84,17 @@
         // show photo page
         function photoPop() {
             var x = document.getElementById("photo-menu");
+            var y = document.getElementById("jenna-container");
+            var z = document.getElementById("bgimg");
             if (x.style.display === "none") {
-                x.style.display = "block";
+                x.style.display = "grid";
+                y.style.display = "none";
+                z.src = "background/static.gif";
+
             } else {
                 x.style.display = "none";
+                y.style.display = "flex";
+                randomBg();
             }
         }
         // hover

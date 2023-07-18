@@ -2,6 +2,9 @@
     font-family: VCRmono;
     src: url(VCR_OSD_MONO.ttf);
 }
+* {
+    scroll-behavior: smooth;
+}
 /* ------------------------------------ */
 ::selection {
     background: #ff0000; /* WebKit/Blink Browsers */
@@ -30,7 +33,6 @@
   }
 html {
     cursor: crosshair;
-    overflow: hidden;
 }
 body {
     margin: 0;
@@ -266,78 +268,74 @@ nav a:hover span {
 }
 /* ---------------- */
 /* SLIDESHOW CONTAINER / CONTENTS */
-#image-wrapper {
-    position: absolute;
+.image-wrap {
+    overflow-x: scroll;
+    overflow-y: hidden;
     display: flex;
-    width: 100%;
+    flex-direction: row;
+}
+#image-wrapper button {
     height: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    font-family: VCRmono;
+    background: none;
+    border: none;
 }
-/* OLD HITBOX */
-/* #image-wrapper button {
-    z-index: 2;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0);
-    border: 0px;
-    width: 40vw;
-    height: 80vh;
-} */
-.slideshow-item {
+#image-wrapper #btnl {cursor:w-resize;}
+#image-wrapper #btnr {cursor:e-resize;}
+.image-container {
+    margin: 1em;
     display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 80vw;
 }
-.slideshow-item img {
-    z-index: 1;
-    max-height: 80vh;
-    max-width: 80vw;
+.image-container img {
+    max-width: 96vw;
+    max-height: 90vh;
 }
-/* OLD BACK/NEXT */
-/* .slideshow-item span {
-    z-index: 3;
-    font-family: monospace;
-    text-align: center;
-    letter-spacing: 2px;
-    padding: 3px;
-    margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-}
-.slideshow-item span a {
-    text-decoration: underline;
-    cursor: pointer;
-}
-.slideshow-item span a:active {
-    font-weight: bold;
-} */
 /* ----------------------------- */
 
 /* TICKER */
 
 /* ------ */
 /* PHOTO MENU / CONTENTS */
-#photo-menu a {
-    z-index: 1;
+#photo-menu {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 275px 1fr;
     position: absolute;
-    text-decoration: none;
-    cursor: crosshair;
-    padding: 3px;
-    height: 20px;
-    font-family: VCRMono;
-    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#photo-menu div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
     background-color: blue;
 }
-#photo-menu a:hover {
-    background-color: red;
-    color: black;
+#photo-menu div span {
+    font-family: VCRmono;
+    font-size: 1em;
+    color: white;
 }
+#photo-menu div a {
+    font-family: VCRmono;
+    font-size: 1em;
+    margin: 0 0 .2em 0;
+    color: white;
+    width: 100%;
+    background-color: none;
+    text-decoration: none;
+}
+#photo-menu div a:hover {
+    color: blue;
+    background-color: white;
+}
+#photo-menu button {
+    height: 100%;
+    background: none;
+    border: none;
+}
+#photo-menu button:hover{cursor:context-menu;}
 #pthumbnail-container {
     position: absolute;
     margin-top: 50px;
@@ -362,6 +360,28 @@ nav a:hover span {
     }
     #exit a{
         padding: 2em;
+    }
+    #photo-menu {
+        grid-template-columns: 1fr 80vw 1fr;
+    }
+    #photo-menu div {width: auto;}
+    #photo-menu div a {
+        text-align: center;
+        width: auto;
+        padding: .5em;
+        margin: 0 0 .5em 0;
+        border: solid white 2px;
+    }
+    #photo-menu div span {
+        color: blue;
+        background-color: white;
+        text-align: center;
+    }
+    .image-wrap {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 750px) {

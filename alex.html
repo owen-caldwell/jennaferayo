@@ -4,31 +4,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <!-- BACKGROUND -->
-    <div id="bg" style="display:block;">
-        <img id="bgimg" src="">
-    </div>
+    <style>
+        body {
+            background: blue;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        @media screen and (max-width: 1072px) {
+            body {
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+        }
+    </style>
     <body>
         <!-- PHOTO SLIDESHOWS -->
-        <div id="image-wrapper" id="pshowA">
-            <div id="image-container">
-                <div class="slideshow-item">
-                    <img src="photo/alex/alex_cover.webp">
-                </div>
-                <div class="slideshow-item">
-                    <img src="photo/alex/alex_2.webp">
-                </div>
-                <div class="slideshow-item">
-                    <img src="photo/alex/alex_3.webp">
-                </div>
-                <div class="slideshow-item">
-                    <img src="photo/alex/alex_4.webp">
-                </div>
-                <div class="slideshow-item">
-                    <img src="photo/alex/alex_5.webp">
-                </div>
-            </div>
-        </div>
         <div id="exit-wrapper">
             <article>
                 <a href="index.html"><img id="globe" src="transpolar.gif"></a>
@@ -38,7 +28,15 @@
             <article>
             </article>
         </div>
+        <div id="image-wrapper">
+            <div id="container" class="image-wrap">
+                <div class="image-container"><img src="photo/alex/alexcover.webp"></div>
+                <div class="image-container"><img src="photo/alex/alex2.webp"></div>
+                <div class="image-container"><img src="photo/alex/alex3.webp"></div>
+                <div class="image-container"><img src="photo/alex/alex4.webp"></div>
+                <div class="image-container"><img src="photo/alex/alex5.webp"></div>
+            </div>
+        </div>
     </body>
     <script src="gallery.js"></script>
-    <script src="randombackground.js"></script>
 </html>
