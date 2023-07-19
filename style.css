@@ -268,11 +268,12 @@ nav a:hover span {
 }
 /* ---------------- */
 /* SLIDESHOW CONTAINER / CONTENTS */
-.image-wrap {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: row;
+#image-wrapper {
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vw;
 }
 #image-wrapper button {
     height: 100%;
@@ -281,6 +282,14 @@ nav a:hover span {
 }
 #image-wrapper #btnl {cursor:w-resize;}
 #image-wrapper #btnr {cursor:e-resize;}
+.image-wrap {
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    width: 400vw;
+    display: flex;
+    flex-direction: row;
+
+}
 .image-container {
     margin: 1em;
     display: flex;
