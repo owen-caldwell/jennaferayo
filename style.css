@@ -2,9 +2,6 @@
     font-family: VCRmono;
     src: url(VCR_OSD_MONO.ttf);
 }
-* {
-    scroll-behavior: smooth;
-}
 /* ------------------------------------ */
 ::selection {
     background: #ff0000; /* WebKit/Blink Browsers */
@@ -275,20 +272,12 @@ nav a:hover span {
     overflow-x: hidden;
     height: 100vw;
 }
-#image-wrapper button {
-    height: 100%;
-    background: none;
-    border: none;
-}
-#image-wrapper #btnl {cursor:w-resize;}
-#image-wrapper #btnr {cursor:e-resize;}
 .image-wrap {
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
-    width: 400vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
-
 }
 .image-container {
     margin: 1em;
@@ -298,7 +287,7 @@ nav a:hover span {
 }
 .image-container img {
     max-width: 96vw;
-    max-height: 90vh;
+    max-height: 80vh;
 }
 /* ----------------------------- */
 
@@ -386,11 +375,17 @@ nav a:hover span {
         background-color: white;
         text-align: center;
     }
+    #image-wrapper {
+        transform: none;
+        height: auto;
+    }
     .image-wrap {
+        transform: none;
         overflow-x: hidden;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
+        width: 104vw;
     }
 }
 @media screen and (max-width: 750px) {
