@@ -140,7 +140,7 @@ nav a:hover span {
 }
 #content-wrapper article p {
     background-color: rgba(0, 0, 0, 0.5);
-    color: #00ff00;
+    color: white;
     font-family: monospace;
     text-align: left;
     font-size: 1.1em;
@@ -217,7 +217,7 @@ nav a:hover span {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: 300px;
+    width: 270px;
 }
 #video-container a {
     text-decoration: none;
@@ -385,7 +385,7 @@ nav a:hover span {
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
-        width: 104vw;
+        width: 100vw;
     }
 }
 @media screen and (max-width: 750px) {
