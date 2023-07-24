@@ -6,46 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     </head>
-    <!-- BACKGROUND -->
-    <div id="bg" style="display:block;">
-        <img id="bgimg" src="background/03.gif">
-    </div>
-    <!--PHOTO BACKGROUND-->
-    <div id="jenna-container">
-        <nav>
-            <img id="jenna" src="jenna.png">
-            <a href="video.html">
-                <img src="disc.png">
-                <span>VIDEO</span>
-            </a>
-            <a onclick="printPop()">
-                <img src="print.png">
-                <span>PRINT</span>
-            </a>
-            <a onclick="photoPop()">
-                <img src="camcorder.png">
-                <span>PHOTO</span>
-            </a>
-        </nav>
-    </div>
-    <!-- PHOTO MENU: thumbnail container (OLD)-->
-    <div style="display: flex;" id="pthumbnail-container">
-        <img id="photoA" src="photo/alex/alex_cover.webp" style="display: none;">
-        <img id="photoB" src="photo/azalea/azalea_cover.webp" style="display: none;">
-        <img id="photoC" src="" style="display: none;">
-        <img id="photoD" src="photo/lks_room/lksroom_cover.webp" style="display: none;">
-        <img id="photoE" src="photo/mia/mia_cover.webp" style="display: none;">
-        <img id="photoF" src="photo/tori/tori_cover.webp" style="display: none;">
-    </div>
     <body>
+        <!-- BACKGROUND -->
+        <div id="bg" style="display:block;">
+            <img id="bgimg" src="background/03.gif">
+        </div>
+        <div id="jenna-container">
+            <nav>
+                <img id="jenna" src="jenna.png">
+                <a href="video.html">
+                    <img src="disc.png">
+                    <span>VIDEO</span>
+                </a>
+                <a onclick="printPop()">
+                    <img src="print.png">
+                    <span>PRINT</span>
+                </a>
+                <a onclick="photoPop()">
+                    <img src="camcorder.png">
+                    <span>PHOTO</span>
+                </a>
+            </nav>
+        </div>
         <!-- PHOTO MENU: linked slideshow buttons -->
         <div style="display: none;" id="print-menu">
-            <a href="alex.html" onmouseover="pHover('photoA')" onmouseleave="pHover('photoA')" style="top: 490px; right: 20%;">ALEX</a>
-            <a href="azalea.html" onmouseover="pHover('photoB')" onmouseleave="pHover('photoB')" style="top: 300px; right: 10%;">AZALEA</a>
-            <a href="" onmouseover="pHover('photoC')" onmouseleave="pHover('photoC')" style="top: 275px; left: 15%;">N/A</a>
-            <a href="lk.html" onmouseover="pHover('photoD')" onmouseleave="pHover('photoD')" style="top: 150px;; right: 25%;">LK's ROOM</a>
-            <a href="mia.html" onmouseover="pHover('photoE')" onmouseleave="pHover('photoE')" style="top: 400px; left: 10%;">MIA</a>
-            <a href="tori.html" onmouseover="pHover('photoF')" onmouseleave="pHover('photoF')" style="top: 500px; left: 15%;">TORI</a>
+            <div>
+                <a href="alex.html">
+                    <img src="photo/alex2022/alex2022_1_1000.webp">
+                    <span>TITLE (2020)</span>
+                </a>
+                <a><img src="photo/alex2022/alex2022_1_1000.webp"></a>
+                <a><img src="photo/alex2022/alex2022_1_1000.webp"></a>
+            </div>
         </div>
         <div style="display: none" id="photo-menu">
             <button onclick="photoPop()"></button>
@@ -97,13 +89,18 @@
                 randomBg();
             }
         }
-        // hover
-        function pHover(photo) {
-            var x = document.getElementById(photo);
+        function printPop() {
+            var x = document.getElementById("print-menu");
+            var y = document.getElementById("jenna-container");
             if (x.style.display === "none") {
-                x.style.display = "block";
+                x.style.display = "flex";
+                y.style.justifyContent = "flex-start";
+                y.style.marginTop = "3em";
+
             } else {
                 x.style.display = "none";
+                y.style.justifyContent = "center";
+                y.style.marginTop = "0";
             }
         }
     </script>

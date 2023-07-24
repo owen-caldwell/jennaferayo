@@ -292,7 +292,41 @@ nav a:hover span {
 }
 /* ----------------------------- */
 
-/* TICKER */
+/* PRINT MENU */
+#print-menu {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#print-menu div {
+    pointer-events: all;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+#print-menu div a {
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+}
+#print-menu div a span {
+    margin-top: 5px;
+    padding: 3px;
+    width: fit-content;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: VCRMono
+}
+#print-menu div a img {
+    padding: 0;
+    max-height: 50vh;
+}
+
 
 /* ------ */
 /* PHOTO MENU / CONTENTS */
@@ -345,7 +379,7 @@ nav a:hover span {
     
 }
 #pthumbnail-container img {
-    max-height: 85vh;
+    max-height: 75vh;
 }
 /* @media screen and (max-width: 1066px) {
     #exit {
@@ -390,6 +424,16 @@ nav a:hover span {
     }
 }
 @media screen and (max-width: 750px) {
+    #print-menu div {
+        margin-top: 11em;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: scroll;
+    }
+    #print-menu div a {
+        margin: 0 0 4em 0;
+    }
     nav a span {
         color: white;
         background-color: rgba(0, 0, 0, 0.4);
