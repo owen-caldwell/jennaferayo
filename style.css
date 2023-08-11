@@ -311,6 +311,7 @@ nav a:hover span {
 }
 #print-menu div a {
     display: flex;
+    text-decoration: none;
     padding: 1em;
     flex-direction: column;
 }
