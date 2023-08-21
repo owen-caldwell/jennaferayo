@@ -149,6 +149,15 @@ nav a:hover span {
     width: 200px;
     height: fit-content;
 }
+#content-wrapper article p a {
+    color: white;
+    pointer-events:all; 
+    text-decoration: none;
+}
+#content-wrapper article p a:hover {
+    cursor: pointer;
+    color: lime;
+}
 #exit-wrapper {
     z-index: 0;
     position: sticky;
@@ -280,6 +289,18 @@ nav a:hover span {
     display: flex;
     flex-direction: row;
 }
+.text-container {
+    margin: 2em;
+    color: white;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+}
+.text-container p {
+    width: 30vw;
+    padding-left: 1em;
+    text-align: left;
+}
 .image-container {
     margin: 1em;
     display: flex;
@@ -327,9 +348,8 @@ nav a:hover span {
     padding: 0;
     max-height: 50vh;
 }
-
-
 /* ------ */
+
 /* PHOTO MENU / CONTENTS */
 #photo-menu {
     width: 100%;
