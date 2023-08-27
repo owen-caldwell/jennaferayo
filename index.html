@@ -104,16 +104,13 @@
         function photoPop() {
             var x = document.getElementById("photo-menu");
             var y = document.getElementById("jenna-container");
-            var z = document.getElementById("bgimg");
             if (x.style.display === "none") {
                 x.style.display = "grid";
                 y.style.display = "none";
-                z.src = "background/static.gif";
 
             } else {
                 x.style.display = "none";
                 y.style.display = "flex";
-                randomBg();
             }
         }
         function printPop() {
