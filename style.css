@@ -311,6 +311,9 @@ nav a:hover span {
     max-width: 96vw;
     max-height: 80vh;
 }
+.spread img {
+    max-width: 50vw;
+}
 .endimg {margin-right: 1em;}
 /* ----------------------------- */
 
@@ -410,7 +413,10 @@ nav a:hover span {
     }
 } */
 @media screen and (max-width: 1072px) {
-    .text-container p {width: auto;}
+    .text-container p {
+        width: auto;
+        font-size: 1.1em;
+    }
     #video-main {
         grid-template-rows: .2fr 1fr;
     }
@@ -448,9 +454,6 @@ nav a:hover span {
     .endimg {margin-right: 0;}
 }
 @media screen and (max-width: 750px) {
-    .spread img {
-        max-width: 50vw;
-    }
     #print-menu div {
         margin-top: 11em;
         flex-direction: column;
