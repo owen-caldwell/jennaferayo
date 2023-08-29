@@ -311,6 +311,7 @@ nav a:hover span {
     max-width: 96vw;
     max-height: 80vh;
 }
+.endimg {margin-right: 1em;}
 /* ----------------------------- */
 
 /* PRINT MENU */
@@ -444,6 +445,7 @@ nav a:hover span {
         flex-direction: column;
         width: 100vw;
     }
+    .endimg {margin-right: 0;}
 }
 @media screen and (max-width: 750px) {
     .spread img {
