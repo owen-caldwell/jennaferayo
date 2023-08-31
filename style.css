@@ -28,9 +28,6 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
-html {
-    cursor: crosshair;
-}
 body {
     background-color: black;
     margin: 0;
@@ -311,9 +308,6 @@ nav a:hover span {
     max-width: 96vw;
     max-height: 80vh;
 }
-.spread img {
-    max-width: 50vw;
-}
 .endimg {margin-right: 1em;}
 /* ----------------------------- */
 
@@ -413,10 +407,7 @@ nav a:hover span {
     }
 } */
 @media screen and (max-width: 1072px) {
-    .text-container p {
-        width: auto;
-        font-size: 1.1em;
-    }
+    .text-container p {width: auto;}
     #video-main {
         grid-template-rows: .2fr 1fr;
     }
