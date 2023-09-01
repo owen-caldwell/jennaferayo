@@ -408,6 +408,7 @@ nav a:hover span {
 } */
 @media screen and (max-width: 1072px) {
     .text-container p {width: auto;}
+    .spread img {width: 50vw;}
     #video-main {
         grid-template-rows: .2fr 1fr;
     }
