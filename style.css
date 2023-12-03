@@ -220,11 +220,11 @@ nav a:hover span {
     align-items: center;
 }
 #video-container article {
-    margin: 10px;
+    margin: 20px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: 270px;
+    width: 370px;
 }
 #video-container a {
     text-decoration: none;
