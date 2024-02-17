@@ -441,7 +441,6 @@ nav a:hover span {
     .altnav {display: none;}
     #jenna-container {display: flex;}
     #print-menu div {
-        margin-top: 15%;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
