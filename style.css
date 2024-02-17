@@ -29,7 +29,6 @@
     background: #555; 
   }
 body {
-    background-color: black;
     margin: 0;
 }
 /* BACKGROUND */
@@ -60,7 +59,7 @@ body {
 /* JENNA LOGO */
 #jenna-container {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -85,7 +84,6 @@ nav {
 }
 nav img {
     width: 100%;
-    opacity: .8;
 }
 nav a {
     cursor: pointer;
@@ -123,51 +121,19 @@ nav a:hover span {
 /* --------------------- */
 /* HOME CONTENT WRAPPER / CONTENTS */
 #content-wrapper {
-    pointer-events: none; 
-    z-index: 0;
     position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 50fr 1fr;
+    bottom: 0;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-}
-#content-wrapper article {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-#content-wrapper article p {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-family: monospace;
-    text-align: left;
-    font-size: 1.1em;
-    padding: 5px;
-    width: 200px;
-    height: fit-content;
-}
-#content-wrapper article p a {
-    color: white;
-    pointer-events:all; 
-    text-decoration: none;
-}
-#content-wrapper article p a:hover {
-    cursor: pointer;
-    color: lime;
 }
 #exit-wrapper {
-    z-index: 0;
+    z-index: 2;
     position: sticky;
     left: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 100%;
-}
-#exit-wrapper article {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 #exit-wrapper article p {
     background-color: rgba(0, 0, 0, 0.5);
@@ -184,6 +150,25 @@ nav a:hover span {
     width: 200px;
     height: 75px;
     border: 2px solid black;
+}
+.altnav {display: flex;}
+.desc {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: monospace;
+    text-align: left;
+    font-size: 1.1em;
+    padding: 5px;
+    width: 200px;
+}
+.desc a {
+    color: white;
+    pointer-events: all;
+    text-decoration: none;
+}
+.desc a:hover {
+    cursor: pointer;
+    color: lime;
 }
 /* ------------------------------- */
 /* VIDEO CONTAINER / CONTENTS */
@@ -351,27 +336,35 @@ nav a:hover span {
 /* ------ */
 
 /* PHOTO MENU / CONTENTS */
-#photo-menu {
+.photo-menu-wrapper {
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 275px 1fr;
     position: absolute;
     justify-content: center;
     align-items: center;
 }
-#photo-menu div {
+.photomenu-button {
+    background: none;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.photo-menu {
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 400px;
     padding: 2em;
     background-color: blue;
 }
-#photo-menu div span {
+.photo-menu span {
     font-family: VCRmono;
     font-size: 1em;
     color: white;
 }
-#photo-menu div a {
+.photo-menu a {
     font-family: VCRmono;
     font-size: 1em;
     margin: 0 0 .2em 0;
@@ -380,16 +373,10 @@ nav a:hover span {
     background-color: none;
     text-decoration: none;
 }
-#photo-menu div a:hover {
+.photo-menu a:hover {
     color: blue;
     background-color: white;
 }
-#photo-menu button {
-    height: 100%;
-    background: none;
-    border: none;
-}
-#photo-menu button:hover{cursor:context-menu;}
 #pthumbnail-container {
     position: absolute;
     margin-top: 50px;
@@ -409,6 +396,9 @@ nav a:hover span {
     }
 } */
 @media screen and (max-width: 1072px) {
+    ::-webkit-scrollbar {
+        width: 0px;
+      }
     .text-container p {width: auto;}
     .spread img {width: 50vw;}
     #video-main {
@@ -448,8 +438,10 @@ nav a:hover span {
     .endimg {margin-right: 0;}
 }
 @media screen and (max-width: 750px) {
+    .altnav {display: none;}
+    #jenna-container {display: flex;}
     #print-menu div {
-        margin-top: 11em;
+        margin-top: 15%;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -481,8 +473,5 @@ nav a:hover span {
         padding: .1em;
         font-size: .7em;
         font-family: VCRMono;
-    }
-    #content-wrapper article {
-        font-size: .8em;
     }
 }

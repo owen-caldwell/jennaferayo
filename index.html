@@ -37,7 +37,6 @@
         </div>
         <div id="jenna-container">
             <nav>
-                <img id="jenna" src="jenna.png">
                 <a href="video">
                     <img src="camcorder.png">
                     <span>VIDEO</span>
@@ -69,10 +68,10 @@
                 </a>
             </div>
         </div>
-        <div style="display: none" id="photo-menu">
-            <button onclick="photoPop()"></button>
-            <div>
-                <span style="color: red;" onclick="photoPop()">[BACK]</span><br>
+        <div style="display: none;" class="photo-menu-wrapper">
+            <button onclick="photoPop()" class="photomenu-button"></button>
+            <div class="photo-menu">
+                <span onclick="photoPop()" style="color: red;">[BACK]</span><br>
                 <a href="umr2023">ursula, maeve, and ruby 2023</a>
                 <a href="alex2023">alex 2023</a>
                 <a href="bridget2023">bridget 2023</a>
@@ -84,50 +83,52 @@
                 <a href="mia2020">mia 2020</a>
                 <a href="tori2020">tori 2020</a>
             </div>
-            <button onclick="photoPop()"></button>
         </div>
         <div id="content-wrapper">
-            <article>
-                <p>
+            <p class="desc">
                 <a href="https://www.instagram.com/jennaferayo/">@JENNAFERAYO</a> <br>
                 <a href="mailto:jferayorni@gmail.com">JFERAYORNI@GMAIL.COM</a><br>
                 NEW YORK, NY
-                </p>
-            </article>
-            <article>
-            </article>
-            <article>
-                <img id="globe" src="transpolar.gif">
-            </article>
+            </p>
+            <nav class="altnav">
+                <a class="sidelink" href="video">
+                    <img src="camcorder.png">
+                    <span>VIDEO</span>
+                </a>
+                <a class="sidelink" onclick="printPop()">
+                    <img src="print.png">
+                    <span>PRINT</span>
+                </a>
+                <a class="sidelink" onclick="photoPop()">
+                    <img src="disc.png">
+                    <span>PHOTO</span>
+                </a>
+                <!-- onclick="travel()" -->
+                <a style="display: flex;">
+                    <img style="margin: 0 1em 1em 1em;" id="globe" src="transpolar.gif">
+                </a>
+            </nav>
         </div>
     </body>
     <script>
         // -- PHOTO RELATED SCRIPTS --
         // show photo page
         function photoPop() {
-            var x = document.getElementById("photo-menu");
-            var y = document.getElementById("jenna-container");
+            var x = document.querySelector(".photo-menu-wrapper");
             if (x.style.display === "none") {
-                x.style.display = "grid";
-                y.style.display = "none";
+                x.style.display = "flex";
 
             } else {
                 x.style.display = "none";
-                y.style.display = "flex";
             }
         }
         function printPop() {
             var x = document.getElementById("print-menu");
-            var y = document.getElementById("jenna-container");
             if (x.style.display === "none") {
                 x.style.display = "flex";
-                y.style.justifyContent = "flex-start";
-                y.style.marginTop = "3em";
 
             } else {
                 x.style.display = "none";
-                y.style.justifyContent = "center";
-                y.style.marginTop = "0";
             }
         }
     </script>
