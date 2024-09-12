@@ -1,136 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Canonical link to help search engines -->
-        <link rel="canonical" href="/" />
+  <head>
+    <!-- Canonical link to help search engines -->
+    <link rel="canonical" href="/" />
 
-        <!-- Basic meta elements -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Neat!">
-        <meta name="author" content="Jenna Ferayo">
-        <meta name='url' content='https://www.jennaferayo.com/index' />
-        <!-- Enable responsiveness on mobile devices -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-        <!-- Open Graph metadata -->
-        <meta property="og:title" content="Jenna Ferayo" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.jennaferayo.com/index" />
-        <meta property="og:description" content="Neat!">
-        <meta property="og:site_name" content="Jenna Ferayo" />
-        <meta property="og:image" content="https://jennaferayo.com/ogimg.webp" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="1600" />
-        <meta property="og:image:height" content="1197" />
-        <title>
-            
-            JENNA FERAYO
-            
-        </title>
-        <link rel="icon" type="image/x-icon" href="icon.png">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!-- BACKGROUND -->
-        <div id="bg" style="display:block;">
-            <img id="bgimg" src="background/03.gif">
-        </div>
-        <div id="jenna-container">
-            <nav>
-                <a href="video">
-                    <img src="camcorder.png">
-                    <span>VIDEO</span>
-                </a>
-                <a onclick="printPop()">
-                    <img src="print.png">
-                    <span>PRINT</span>
-                </a>
-                <a onclick="photoPop()">
-                    <img src="disc.png">
-                    <span>PHOTO</span>
-                </a>
-            </nav>
-        </div>
-        <!-- PHOTO MENU: linked slideshow buttons -->
-        <div style="display: none;" id="print-menu">
-            <div>
-                <a href="solace">
-                    <img src="print/solacecover.webp">
-                    <span>SOLACE (2022)</span>
-                </a>
-                <a href="entropy">
-                    <img src="print/entropycover.webp">
-                    <span>ENTROPY (2023)</span>
-                </a>
-                <a href="scyearbook">
-                    <img src="print/sccover.webp">
-                    <span>SC YEARBOOK VOL.1 (2022)</span>
-                </a>
-            </div>
-        </div>
-        <div style="display: none;" class="photo-menu-wrapper">
-            <button onclick="photoPop()" class="photomenu-button"></button>
-            <div class="photo-menu">
-                <span onclick="photoPop()" style="color: red;">[BACK]</span><br>
-                <a href="umr2023">ursula, maeve, and ruby 2023</a>
-                <a href="alex2023">alex 2023</a>
-                <a href="bridget2023">bridget 2023</a>
-                <a href="rae2023">rae 2023</a>
-                <a href="landb2023">leah and becca 2023</a>
-                <a href="alex2022">alex 2022</a>
-                <a href="azalea2022">azelea 2022</a>
-                <a href="lr2022">lauren's room 2022</a>
-                <a href="mia2020">mia 2020</a>
-                <a href="tori2020">tori 2020</a>
-            </div>
-        </div>
-        <div id="content-wrapper">
-            <p class="desc">
-                <a href="https://www.instagram.com/jennaferayo/">@JENNAFERAYO</a> <br>
-                <a href="mailto:jferayorni@gmail.com">JFERAYORNI@GMAIL.COM</a><br>
-                NEW YORK, NY
-            </p>
-            <nav class="altnav">
-                <a class="sidelink" href="video">
-                    <img src="camcorder.png">
-                    <span>VIDEO</span>
-                </a>
-                <a class="sidelink" onclick="printPop()">
-                    <img src="print.png">
-                    <span>PRINT</span>
-                </a>
-                <a class="sidelink" onclick="photoPop()">
-                    <img src="disc.png">
-                    <span>PHOTO</span>
-                </a>
-                <!-- onclick="travel()" -->
-                <a style="display: flex;">
-                    <img style="margin: 0 1em 1em 1em;" id="globe" src="transpolar.gif">
-                </a>
-            </nav>
-        </div>
-    </body>
-    <script>
-        // -- PHOTO RELATED SCRIPTS --
-        // show photo page
-        function photoPop() {
-            var x = document.querySelector(".photo-menu-wrapper");
-            if (x.style.display === "none") {
-                x.style.display = "flex";
-
-            } else {
-                x.style.display = "none";
-            }
-        }
-        function printPop() {
-            var x = document.getElementById("print-menu");
-            if (x.style.display === "none") {
-                x.style.display = "flex";
-
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
-    <script src="randombackground.js"></script>
+    <!-- Basic meta elements -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Neat!" />
+    <meta name="author" content="Jenna Ferayo" />
+    <meta name="url" content="https://www.jennaferayo.com/index" />
+    <!-- Enable responsiveness on mobile devices -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Jenna Ferayo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jennaferayo.com/index" />
+    <meta property="og:description" content="Neat!" />
+    <meta property="og:site_name" content="Jenna Ferayo" />
+    <meta property="og:image" content="https://jennaferayo.com/ogimg.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1197" />
+    <title>JENNA FERAYO</title>
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- BACKGROUND -->
+    <div id="bg" style="display: block">
+      <img id="bgimg" src="background/03.gif" />
+    </div>
+    <div id="jenna-container">
+      <nav>
+        <a href="video">
+          <img src="camcorder.png" />
+          <span>VIDEO</span>
+        </a>
+        <a onclick="printPop()">
+          <img src="print.png" />
+          <span>PRINT</span>
+        </a>
+        <a onclick="photoPop()">
+          <img src="disc.png" />
+          <span>PHOTO</span>
+        </a>
+      </nav>
+    </div>
+    <!-- PHOTO MENU: linked slideshow buttons -->
+    <div style="display: none" id="print-menu">
+      <div>
+        <a href="solace">
+          <img src="print/solacecover.webp" />
+          <span>SOLACE (2022)</span>
+        </a>
+        <a href="entropy">
+          <img src="print/entropycover.webp" />
+          <span>ENTROPY (2023)</span>
+        </a>
+        <a href="scyearbook">
+          <img src="print/sccover.webp" />
+          <span>SC YEARBOOK VOL.1 (2022)</span>
+        </a>
+      </div>
+    </div>
+    <div style="display: none" class="photo-menu-wrapper">
+      <button onclick="photoPop()" class="photomenu-button"></button>
+      <div class="photo-menu">
+        <span onclick="photoPop()" style="color: red">[BACK]</span><br />
+        <a href="umr2023">ursula, maeve, and ruby 2023</a>
+        <a href="alex2023">alex 2023</a>
+        <a href="bridget2023">bridget 2023</a>
+        <a href="rae2023">rae 2023</a>
+        <a href="landb2023">leah and becca 2023</a>
+        <a href="alex2022">alex 2022</a>
+        <a href="azalea2022">azelea 2022</a>
+        <a href="lr2022">lauren's room 2022</a>
+        <a href="mia2020">mia 2020</a>
+        <a href="tori2020">tori 2020</a>
+      </div>
+    </div>
+    <div id="content-wrapper">
+      <p class="desc">
+        <a href="https://www.instagram.com/jennaferayo/">@JENNAFERAYO</a> <br />
+        <a href="mailto:jferayorni@gmail.com">JFERAYORNI@GMAIL.COM</a><br />
+        NEW YORK, NY
+      </p>
+      <nav class="altnav">
+        <a class="sidelink" href="video">
+          <img src="camcorder.png" />
+          <span>VIDEO</span>
+        </a>
+        <a class="sidelink" onclick="printPop()">
+          <img src="print.png" />
+          <span>PRINT</span>
+        </a>
+        <a class="sidelink" onclick="photoPop()">
+          <img src="disc.png" />
+          <span>PHOTO</span>
+        </a>
+        <!-- onclick="travel()" -->
+        <a style="display: flex">
+          <img style="margin: 0 1em 1em 1em" id="globe" src="transpolar.gif" />
+        </a>
+      </nav>
+    </div>
+  </body>
+  <script>
+    // -- PHOTO RELATED SCRIPTS --
+    // show photo page
+    function photoPop() {
+      var x = document.querySelector(".photo-menu-wrapper");
+      if (x.style.display === "none") {
+        x.style.display = "flex";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function printPop() {
+      var x = document.getElementById("print-menu");
+      if (x.style.display === "none") {
+        x.style.display = "flex";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+  <script src="randombackground.js"></script>
 </html>
