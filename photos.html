@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Canonical link to help search engines -->
+    <link rel="canonical" href="/" />
+
+    <!-- Basic meta elements -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Neat!" />
+    <meta name="author" content="Jenna Ferayo" />
+    <meta name="url" content="https://www.jennaferayo.com/photos" />
+    <!-- Enable responsiveness on mobile devices -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Jenna Ferayo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jennaferayo.com/photos" />
+    <meta property="og:description" content="Neat!" />
+    <meta property="og:site_name" content="Jenna Ferayo" />
+    <meta property="og:image" content="https://jennaferayo.com/ogimg.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1197" />
+    <title>JENNA FERAYO</title>
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* adjustment from video page */
+      #video-container {
+        justify-content: flex-start;
+      }
+      #video-container article {
+        margin: 2em 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        width: auto;
+        height: 50vh;
+      }
+      #video-container a {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+      }
+      .thumbnail {
+        max-width: 100%;
+        max-height: 50vh;
+      }
+      /* media query for phones */
+      @media only screen and (max-width: 600px) {
+        #video-container article {
+          margin: 10px;
+          height: auto;
+          width: 100%;
+        }
+        .thumbnail {
+          max-height: none;
+        }
+        #video-container {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <!-- BACKGROUND -->
+  <div id="bg" style="display: block">
+    <img id="bgimg" src="background/05.gif" />
+  </div>
+  <body>
+    <div id="video-main">
+      <div id="video-wrapper">
+        <div id="video-container">
+          <article>
+            <a href="umr2023">
+              <img class="thumbnail" src="photo/umr2023/umr2023_1_750.webp" />
+              <span>URSULA, MAEVE, AND RUBY 2023</span>
+            </a>
+          </article>
+          <article>
+            <a href="alex2023">
+              <img class="thumbnail" src="photo/alex2023/alex2023_2_750.webp" />
+              <span>ALEX 2023</span>
+            </a>
+          </article>
+          <article>
+            <a href="bridget2023">
+              <img
+                class="thumbnail"
+                src="photo/bridget2023/bridget2023_1_750.webp"
+              />
+              <span>BRIDGET 2023</span>
+            </a>
+          </article>
+          <article>
+            <a href="rae2023">
+              <img class="thumbnail" src="photo/rae2023/rae2023_1_750.webp" />
+              <span>RAE 2023</span>
+            </a>
+          </article>
+          <article>
+            <a href="landb2023">
+              <img
+                class="thumbnail"
+                src="photo/landb2023/landb2023_1_750.webp"
+              />
+              <span>LEAH AND BECCA 2023</span>
+            </a>
+          </article>
+          <article>
+            <a href="alex2022">
+              <img class="thumbnail" src="photo/alex2022/alex2022_1_750.webp" />
+              <span>ALEX 2022</span>
+            </a>
+          </article>
+          <article>
+            <a href="azalea2022">
+              <img
+                class="thumbnail"
+                src="photo/azalea2022/azalea2022_1_750.webp"
+              />
+              <span>AZALEA 2022</span>
+            </a>
+          </article>
+          <article>
+            <a href="lr2022">
+              <img class="thumbnail" src="photo/lr2022/lr2022_1_750.webp" />
+              <span>LAURA'S ROOM 2022</span>
+            </a>
+          </article>
+          <article>
+            <a href="mia2020">
+              <img class="thumbnail" src="photo/mia2020/mia2020_1_750.webp" />
+              <span>MIA 2020</span>
+            </a>
+          </article>
+          <article>
+            <a href="tori2020">
+              <img class="thumbnail" src="photo/tori2020/tori2020_1_750.webp" />
+              <span>TORI 2020</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div id="exit-wrapper">
+      <article>
+        <a href="index"><img id="globe" src="transpolar.gif" /></a>
+      </article>
+      <article></article>
+      <article></article>
+    </div>
+  </body>
+  <script src="randombackground.js"></script>
+</html>
