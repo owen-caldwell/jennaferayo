@@ -34,7 +34,7 @@ body {
 }
 /* BACKGROUND */
 #bg {
-  opacity: .8;
+  opacity: 0.8;
   position: fixed;
   top: -50%;
   left: -50%;
@@ -193,7 +193,7 @@ nav a:hover span {
   border-bottom: 2px solid black;
 }
 .desc-links a:hover {
-    border: 2px solid lime;
+  border: 2px solid lime;
 }
 .desc a:hover {
   cursor: pointer;
@@ -336,6 +336,7 @@ nav a:hover span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 #print-menu div {
   pointer-events: all;
@@ -495,6 +496,12 @@ nav a:hover span {
 @media screen and (max-width: 750px) {
   nav {
     justify-content: space-between;
+    margin-top: 5em;
+  }
+  nav a span {
+    color: white;
+    padding: 3px 5px;
+    background-color: rgba(60, 60, 189, 0.93);
   }
   .altnav {
     display: none;
@@ -506,9 +513,6 @@ nav a:hover span {
     display: flex;
     justify-content: flex-start;
   }
-  nav {
-    margin-top: 5em;
-  }
   #print-menu div {
     flex-direction: column;
     justify-content: flex-start;
@@ -518,13 +522,11 @@ nav a:hover span {
   #print-menu div a {
     margin: 0 0 4em 0;
   }
-  nav a span {
-    color: white;
-    padding: 3px 5px;
-    background-color: rgba(60, 60, 189, 0.93);
-  }
   #video-main {
     grid-template-rows: 0.1fr 1fr;
+  }
+  .desc {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 400px) {
