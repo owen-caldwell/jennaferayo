@@ -513,6 +513,9 @@ nav a:hover span {
     display: flex;
     justify-content: flex-start;
   }
+  #print-menu {
+    background-color: rgba(192, 192, 192, 0.85);
+  }
   #print-menu div {
     flex-direction: column;
     justify-content: flex-start;
